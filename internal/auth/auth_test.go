@@ -18,8 +18,8 @@ func TestAuth(t *testing.T) {
     req, _ := http.NewRequest(http.MethodGet, "https://example.com", nil) 
     req.Header.Add("Authorization", "ApiKey abcde12345")
     result, err := GetAPIKey(req.Header) 
-    if result != "abcde12345" || err != nil {
-        t.Errorf("HTTP header with ApiKey=abcde12345 returned %v, %s", result, err)
+    if result != "abcde123456" || err != nil {
+        t.Errorf("HTTP header with ApiKey=abcde12345 returned %v, %v", result, err)
     }
 }
 
