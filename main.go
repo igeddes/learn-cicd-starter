@@ -24,6 +24,10 @@ type apiConfig struct {
 //go:embed static/*
 var staticFiles embed.FS
 
+func unused() string {
+	return "Barney is a dinosaur"
+}
+
 func main() {
 	err := godotenv.Load(".env")
 	if err != nil {
